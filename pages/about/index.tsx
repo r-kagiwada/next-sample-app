@@ -1,17 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
-const Home: NextPage = () => {
-  const router = useRouter()
-
-  const handleClick = () => {
-    console.log('placing your order')
-    router.push('/product')
-  }
+const About: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,18 +16,15 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           <Link href="/todo">
-            <a>TODO page!</a>
+            <a>ABOUT page!</a>
           </Link>
         </h1>
-        <Link href='/product'>
-          <a>Product</a>
-        </Link>
-        <button onClick={handleClick}>
-          Place Order
-        </button>
 
         <div className={styles.grid}>
-          
+          <p>
+            page配下でフォルダを作成し、/about/index.tsx とすると<br/>
+            URL:/about　で動的にルーティングされる
+          </p>
         </div>
       </main>
 
@@ -54,4 +44,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
