@@ -1,7 +1,7 @@
 // import UserCard from '../../components/userCard'
 import { Photo } from '../../types'
-import Image from 'next/image'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import PhotoCard from '../../components/PhotoCaard';
 
 interface Props {
   photos: Photo[]
@@ -14,17 +14,7 @@ const Photos: React.VFC<Props> = ({ photos }) => {
   return (
     <div>
       <h1 className="m-5">List of Photos</h1>
-      <div className="overflow-scroll h-screen w-full grid grid-cols-3 gap-2">
-        {photos.map((photo: Photo) => {
-          return (
-            <div className="w-fit m-3 items-center text-center" key={photo.id}>
-              <h3 className="text-gray-800 text-left">{photo.title}</h3>
-              <Image alt={photo.title} src={photo.thumbnailUrl} width="150px" height="150px" />
-            </div>
-          )
-        })
-        }
-      </div>
+      <PhotoCard photos={photos} />
     </div>
   )
 }
@@ -38,8 +28,9 @@ export const getStaticProps: GetStaticProps = async () => {
   const data = await response.json();
 
   // 取得件数多いので20件のみ表示
+  const limit = 20;
   const photoMap = Object.keys(data).map((i, key) => {
-    if (key < 20) {
+    if (key < limit) {
       return data[i]
     }
   });
