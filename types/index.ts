@@ -1,12 +1,12 @@
 
 export interface User {
-  id: null | number;
-  name: null | String;
-  username?: null | String;
-  email: null | String;
+  id: number;
+  name: string;
+  username?: null | string;
+  email: string;
   address?: null | any;
-  phone?: null | String;
-  website?: null | String;
+  phone?: null | string;
+  website?: null | string;
   company?: null | any;
 };
 
