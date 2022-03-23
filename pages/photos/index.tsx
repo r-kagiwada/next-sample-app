@@ -1,4 +1,3 @@
-// import UserCard from '../../components/userCard'
 import { Photo } from '../../types'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import PhotoCard from '../../components/PhotoCaard';
@@ -14,7 +13,14 @@ const Photos: React.VFC<Props> = ({ photos }) => {
   return (
     <div>
       <h1 className="m-5">List of Photos</h1>
-      <PhotoCard photos={photos} />
+      <div className="overflow-scroll h-screen w-full grid grid-cols-3 gap-2">
+        {photos.map((photo: Photo) => {
+          return (
+            <PhotoCard key={photo.id} photo={photo} />
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
