@@ -17,38 +17,43 @@ const Home: NextPage = () => {
       <div className="grid place-items-start">
         <p className="px-4 m-5">これはNext.jsを学ぶためのサンプルアプリです。</p>
       </div>
-      <div className="m-1 grid grid-cols-2 gap-1 text-2xl">
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
+      <div className="m-1 p-4 grid grid-cols-3 gap-1 text-2xl">
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-primary text-white">
           <Link href='/about'>
             <a>About</a>
           </Link>
         </div>
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
-          <Link href='/docs/param'>
-            <a>Documents</a>
-          </Link>
-        </div>
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-secandary">
           <Link href="/todo">
             <a>TODO</a>
           </Link>
         </div>
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-purple">
           <Link href='/users'>
             <a>Users</a>
           </Link>
         </div>
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
+      </div>
+      <div className="m-1 p-4 grid grid-cols-1 gap-1 text-2xl">
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-white">
           <button onClick={handleClick}>
             See Photos
           </button>
         </div>
-        {/* <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
+      </div>
+      <div className="m-1 p-4 grid grid-cols-3 gap-1 text-2xl">
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-white">
+          <Link href='/docs/param'>
+            <a>Documents</a>
+          </Link>
+        </div>
+      </div>
+      {/* <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
           <Link href='/product'>
             <a>Product</a>
           </Link>
         </div> */}
-      </div>
+
     </div>
   )
 }

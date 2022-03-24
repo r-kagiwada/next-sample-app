@@ -10,6 +10,12 @@ module.exports = {
       red: colors.rose,
       pink: colors.fuchsia,
       white: colors.white,
+      purple: '#D3D2FC',
+      primary: '#24547A',
+      secandary: '#C7E1F2',
+      bgDark: '#F3F3F3',
+      bgMiddle: '#F8F8F8',
+      bgLight: colors.white,
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
