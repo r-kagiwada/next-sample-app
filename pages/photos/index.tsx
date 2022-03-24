@@ -1,6 +1,6 @@
 import { Photo } from '../../types'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
-import PhotoCard from '../../components/PhotoCaard';
+import PhotoCard from '../../components/PhotoCard';
 
 interface Props {
   photos: Photo[]

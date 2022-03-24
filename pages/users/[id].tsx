@@ -32,15 +32,28 @@ const UserDetail: React.VFC<Props> = ({ user: propUser }) => {
     const value = e.currentTarget.value;
 
     // nestが深いObjectの編集
+    // TODO イケてないのでベターなやり方にリファクタしたい。（ブラケット記法だとtsで怒られた...）
     const names = name.split('.');
     if (names.length >= 2)  {
-      setEditUser({
-        ...editUser,
-        [names[0]]: {
-          ...editUser?.[names[0]], // TODO タイプスクリプト対応
-          [names[1]]: value
-        }
-      });
+      if (names[0] === 'address') {
+        setEditUser({
+          ...editUser,
+          address: {
+            ...editUser.address,
+            [names[1]]: value
+          }
+        });
+      }
+      if (names[0] === 'company') {
+        setEditUser({
+          ...editUser,
+          company: {
+            ...editUser.company,
+            [names[1]]: value
+          }
+        });
+      }
+      
       return;
     }
     
@@ -83,7 +96,7 @@ const UserDetail: React.VFC<Props> = ({ user: propUser }) => {
             <p><span className=" text-gray-500">company : </span>{user?.company?.name}</p>
             <p><span className=" text-gray-500">company catch phrase: </span>{user?.company?.catchPhrase}</p>
             <div>
-              <button className='border-solid rounded-lg  border-2 border-blue-500 px-3 py-2' onClick={handleIsEdit}>編集する</button>
+              <button className='my-5 border-solid rounded-lg  border-2 border-blue-500 px-3 py-2' onClick={handleIsEdit}>編集する</button>
             </div>
           </div> :
           <div className='w-full mx-5'>
@@ -128,8 +141,8 @@ const UserDetail: React.VFC<Props> = ({ user: propUser }) => {
               <input name="company.catchPhrase" className='mx-5 p-2 border-2 block rounded-md w-3/12' value={editUser.company?.catchPhrase || ''} onChange={handleChangeUser} />
             </div>
             <div>
-              <button className='border-solid rounded-lg border-2 border-sky-500 px-3 py-2 m-2' onClick={back}>戻る</button>
-              <button className='border-solid rounded-lg border-2 border-blue-500 px-3 py-2' onClick={updateUser}>更新する</button>
+              <button className='my-5 mx-5 w-28 border-solid rounded-lg border-2 border-sky-500 px-3 py-2' onClick={back}>戻る</button>
+              <button className='my-5 w-28 border-solid rounded-lg border-2 border-blue-500 px-3 py-2' onClick={updateUser}>更新する</button>
             </div>
           </div>
         }
