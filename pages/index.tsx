@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
@@ -18,34 +17,30 @@ const Home: NextPage = () => {
         <p className="px-4 m-5">これはNext.jsを学ぶためのサンプルアプリです。</p>
       </div>
       <div className="m-1 p-4 grid grid-cols-3 gap-1 text-2xl">
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-primary text-white">
-          <Link href='/about'>
-            <a>About</a>
-          </Link>
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-primary text-white cursor-pointer"
+          onClick={() => router.push('/about')}>
+          <h3>About</h3>
         </div>
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-secandary">
-          <Link href="/todo">
-            <a>TODO</a>
-          </Link>
-        </div>
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-purple">
-          <Link href='/users'>
-            <a>Users</a>
-          </Link>
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-secandary cursor-pointer"
+          onClick={() => router.push('/todo')}>
+          <h3>TODO</h3>
+Ï        </div>
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-purple cursor-pointer"
+          onClick={() => router.push('users')}>
+          <h3>Users</h3>
         </div>
       </div>
       <div className="m-1 p-4 grid grid-cols-1 gap-1 text-2xl">
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-white">
-          <button onClick={handleClick}>
-            See Photos
-          </button>
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-white cursor-pointer"
+          onClick={handleClick}>
+          See Photos
         </div>
       </div>
       <div className="m-1 p-4 grid grid-cols-3 gap-1 text-2xl">
-        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-white">
-          <Link href='/docs/param'>
-            <a>Documents</a>
-          </Link>
+        <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md bg-white cursor-pointer"
+          onClick={() => router.push('/docs/param')}>
+          <h3>Documents</h3>
+          <p className='m-2 text-sm'>Reactの機能についてのDocs</p>
         </div>
       </div>
       {/* <div className="h-28 m-2 p-4 border border-r-3 border-gray-100 rounded-lg drop-shadow-md">
