@@ -7,7 +7,7 @@ interface Props {
 }
 
 /**
- * 
+ * ユーザー詳細
  * @param param0 
  * @returns 
  */

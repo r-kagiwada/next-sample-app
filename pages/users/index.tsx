@@ -3,7 +3,7 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import UserTable from '../../components/UserTable';
 
 interface Props {
-  users: any
+  users: User[]
 }
 const UserList: React.VFC<Props> = ({ users }) => {
   return <>
