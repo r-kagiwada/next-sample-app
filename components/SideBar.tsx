@@ -4,7 +4,8 @@ import {
   PhotographIcon,
   DocumentIcon,
   ClipboardCheckIcon,
-  InformationCircleIcon
+  InformationCircleIcon,
+  MailIcon
 } from '@heroicons/react/outline'
 import Link from 'next/link'
 
@@ -35,6 +36,10 @@ const SideBar = () => {
       <hr className="border-t-[0.1px] border-gray-200" />
       <Link href="/photos">
         <a className="m-2 py-2 h-7 block"><PhotographIcon className="h-5 w-5 mr-2 inline-block" />Photos</a>
+      </Link>
+      <hr className="border-t-[0.1px] border-gray-200" />
+      <Link href="/api_amplify">
+        <a className="m-2 py-2 h-7 block"><MailIcon className="h-5 w-5 mr-2 inline-block" />Posts</a>
       </Link>
       <hr className="border-t-[0.1px] border-gray-200" />
     </nav>
