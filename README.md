@@ -43,5 +43,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Api with AWS Amplify
 
-実行するときは、`api/aws-exports.js`の作成が必要です。  
-`api/aws-exports.js.samaple`にサンプルファイルを用意したので、コピーして作成してください。
+実行するときは、`.env.local`の作成が必要です。  
+`.env.local.example`にサンプルファイルを用意したので、コピーして作成してください。
