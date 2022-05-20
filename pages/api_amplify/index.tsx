@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
-import { withAuthenticator } from "@aws-amplify/ui-react";
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import { Amplify, API, graphqlOperation } from "aws-amplify";
 import awsExports from "../../api/aws-exports";
 import { createPost, deletePost } from "../../api/graphql/mutations";
@@ -64,6 +64,7 @@ const ApiAmplify: NextPage = () => {
   return (
     <div className="m-5 grid justify-items-center">
       <h1 className="text-4xl p-4 m-5">Amplify Posts List</h1>
+      <AmplifySignOut />
 
       <div className="w-[400px] my-0 flex flex-col justify-center p-5">
         <input
