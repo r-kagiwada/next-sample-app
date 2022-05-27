@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import { Amplify, API, graphqlOperation } from "aws-amplify";
-import awsExports from "../../api/aws-exports";
-import { createPost, deletePost } from "../../api/graphql/mutations";
-import { listPosts } from "../../api/graphql/queries";
+import awsExports from "../../src/aws-exports";
+import { createPost, deletePost } from "../../src/graphql/mutations";
+import { listPosts } from "../../src/graphql/queries";
 import { GraphQLResult } from "@aws-amplify/api-graphql";
 import Observable from "zen-observable-ts";
-import { Post } from "../../api/API";
+import { Post } from "../../src/API";
 
 Amplify.configure(awsExports);
 const initialState = { title: "", content: "" };
