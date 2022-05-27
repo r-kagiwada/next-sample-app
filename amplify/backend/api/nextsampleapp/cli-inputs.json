@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "nextsampleapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/clock10/work/next-sample-app/amplify/backend/api/nextsampleapp/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authnextsampleapp50ea7fba"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 7,
+        "apiKeyExpirationDate": "2022-05-24T01:49:15.628Z",
+        "keyDescription": ""
+      }
+    ]
+  }
+}
