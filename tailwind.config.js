@@ -1,11 +1,10 @@
 const colors = require('tailwindcss/colors');
 // tailwind themeを決める
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {// classで色を使う場合はここで定義する必要がある
-      gray: colors.coolGray,
+      gray: colors.gray,
       blue: colors.sky,
       red: colors.rose,
       pink: colors.fuchsia,
