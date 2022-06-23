@@ -10,7 +10,7 @@ interface Props {
  * @param photos
  * @returns 
  */
-const PhotoCard: React.VFC<Props> = ({ photo }) => {
+const PhotoCard: React.FC<Props> = ({ photo }) => {
 
   return (
     <div className="m-5 items-center text-center rounded-lg border-2 p-2 w-full">

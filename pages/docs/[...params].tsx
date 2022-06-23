@@ -20,6 +20,16 @@ function Docs () {
           <a className="m-1">useEffectについて</a>
         </Link>
       </li>
+      <li>
+        <Link href='/docs/useMemoSample' >
+          <a className="m-1">useMemoについて</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/docs/useCallbackSample' >
+          <a className="m-1">useCallbackについて</a>
+        </Link>
+      </li>
     </ul>
   </>
 }
